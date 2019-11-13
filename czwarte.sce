@@ -44,15 +44,15 @@ if odle(X,n)(1)==1 then
     Wn=sum(Tmp);
             
 else
-        for k=1:n
+           for k=1:n
         for i=0:(n-k)
-            D(i+1,k+1)=(D(i+2,k)-D(i+1,k))/(X(i+k+1)-X(i+1))
+            D(i+1,k+1)=(D(i+2,k)-D(i+1,k))/(X(i+k+1)-X(i+1));
         end
     end
     Tmp(i+1)=D(1,1);
-     for i=1:k
-        Tmp(i+1)=(D(1,i+1)*omega(x_dach,X,i-1))
-    end
+    for i = 1:k
+        Tmp(i+1)=(D(1,i+1)*omega(x_bar,X,i-1));
+    end;
     Wn=sum(Tmp);
 end
 disp(Wn)
